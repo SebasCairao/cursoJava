@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="GUIA10-EJ5">
+  <ClassDiagramComponents>
+    <Class name="EntidadPais" package="EntidadPais" visibility="public" xPosition="70.0" yPosition="187.0">
+      <Fields>
+        <Field name="nombrePais" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombrePais"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombrePais" returnType="String" visibility="public"/>
+        <Method name="setNombrePais" returnType="void" visibility="public">
+          <Argument type="String" name="nombrePais"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="EntidadPais" name="otroPais"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MAIN" package="guia10.ej5" visibility="public" xPosition="493.0" yPosition="101.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioPais" package="ServicioPais" visibility="public" xPosition="696.0" yPosition="382.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="conjuntoDePais" type="Set&lt;EntidadPais&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPais" returnType="void" visibility="public"/>
+        <Method name="agregarPais" returnType="void" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="ordenarPaises" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="EntidadPais.EntidadPais" target="EntidadPais.EntidadPais" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conjuntoDePais" source="ServicioPais.ServicioPais" target="EntidadPais.EntidadPais" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;EntidadPais&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
